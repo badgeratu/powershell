@@ -1,0 +1,29 @@
+1. Install Powershell 7 : https://docs.microsoft.com/en-gb/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.1
+
+2. Install a Powerline font for the enhanced glyphs. I like "DejaVu Sans Mono for Powerline"
+
+   a) Clone the GitHub repository at https://github.com/powerline/fonts
+   b) In Windows Explorer navigate to the subdirectory you want (e.g. .\DejaVuSansMono)
+   c) Select all .TTF files in the directory (or one at a time), right-click on the selection and click "Install"
+   
+3. Install PoshGit and OhMyPosh
+
+   a) Open a Powershell 7 Prompt and run the following:
+   
+      > Install-Module posh-git -Scope CurrentUser -Force
+	  > Install-Module oh-my-posh -Scope CurrentUser
+
+4. Edit the Powershell Profile
+
+   a) Open a Powershell 7 Prompt and change to the $PROFILE directory 
+   
+      > Split-Path $PROFILE | cd
+	  
+   b) Create a "PoshThemes" directory and within it an "SXJ.psm1" file with the usual contents  
+      
+	  
+   b) Edit (or create) the "Microsoft.PowerShell_profile.ps1" in the root folder to match the following:
+
+      Import-Module posh-git
+	  Import-Module oh-my-posh
+      Set-Theme SXJ   
